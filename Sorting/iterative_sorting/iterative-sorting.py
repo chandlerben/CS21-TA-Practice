@@ -27,5 +27,17 @@ print(selected_sort(a))
 #   Being out of the While loop means we have run through the array with anything being changed.
 #   This means it should be sorted.
 #   Return the array.
-#
-#
+
+def bubble_sort(arr):
+    flag = False
+    while flag == False:
+        flag = True
+        for i in range(0, len(arr) - 1):
+            if arr[i] > arr[i+1]:
+                arr[i], arr[i+1] = arr[i+1], arr[i]
+                flag = False
+    return arr
+
+
+print(bubble_sort(a))
+
