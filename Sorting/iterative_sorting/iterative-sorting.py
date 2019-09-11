@@ -28,14 +28,15 @@ print(selected_sort(a))
 #   This means it should be sorted.
 #   Return the array.
 
+
 def bubble_sort(arr):
-    flag = False
-    while flag == False:
-        flag = True
+    flag = True
+    while flag == True:
+        flag = False
         for i in range(0, len(arr) - 1):
             if arr[i] > arr[i+1]:
                 arr[i], arr[i+1] = arr[i+1], arr[i]
-                flag = False
+                flag = True
     return arr
 
 
