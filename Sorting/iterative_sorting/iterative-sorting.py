@@ -29,7 +29,6 @@ print(selected_sort(a))
 #   Return the array.
 
 
-
 def bubble_sort(arr):
     flag = True
     while flag == True:
@@ -42,3 +41,4 @@ def bubble_sort(arr):
 
 
 print(bubble_sort(a))
+
