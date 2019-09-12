@@ -4,29 +4,24 @@ import math
 
 
 def recipe_batches(recipe, ingredients):
-    min_ratio = math.inf
+    # Start out with an infinite amount of recipes being made
+    # Iterate through the recipe and get both the ingredient name and amount of that ingredient
+    # If the ingredient in the recipe is NOT in the ingredients, return 0
+    # the new ratio is going to equal the math.floor of the ingredients[ingredient] (amount of that ingredient we have) / amount the recipe calls for.
+    # if the new ratio is smaller than the infinite max number of recipes possible, that is the new max ratio.
+    # print(recipe.values())
+    max_ratio = math.inf
 
     for ingredient, amount in recipe.items():
         if ingredient not in ingredients:
             return 0
-        ratio = math.floor(ingredients[ingredient] / amount)
-        if ratio < min_ratio:
-            min_ratio = ratio
-    return min_ratio
+        new_ratio = math.floor(ingredients[ingredient] / amount)
+        max_ratio = min(new_ratio, max_ratio)
+    return max_ratio
 
 
-# print(recipe_batches({'milk': 100, 'butter': 50, 'cheese': 10}, {
-#     'milk': 198, 'butter': 52, 'cheese': 10}))
-
-# min_ratio = math.inf
-
-# for ingredient, amount in recipe.items():
-#     if ingredient not in ingredients:
-#         return 0
-#     ratio = math.floor(ingredients[ingredient] / amount)
-#     if ratio < min_ratio:
-#         min_ratio = ratio
-# return min_ratio
+recipe_batches({'milk': 100, 'flour': 4, 'sugar': 10, 'butter': 5}, {
+    'milk': 1288, 'flour': 9, 'sugar': 95})
 
 
 if __name__ == '__main__':
