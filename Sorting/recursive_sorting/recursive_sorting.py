@@ -20,6 +20,8 @@ def merge(arrA, arrB):
             b += 1
     return merged_arr
 
+[-1, 4, 6, 7, 8]
+[-7, -4, 0, 3, 3, 7]
 
 # TO-DO
 # Make two variables that are TRACKERS of where I am in each array.
