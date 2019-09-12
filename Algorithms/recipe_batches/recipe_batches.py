@@ -4,7 +4,29 @@ import math
 
 
 def recipe_batches(recipe, ingredients):
-    pass
+    min_ratio = math.inf
+
+    for ingredient, amount in recipe.items():
+        if ingredient not in ingredients:
+            return 0
+        ratio = math.floor(ingredients[ingredient] / amount)
+        if ratio < min_ratio:
+            min_ratio = ratio
+    return min_ratio
+
+
+# print(recipe_batches({'milk': 100, 'butter': 50, 'cheese': 10}, {
+#     'milk': 198, 'butter': 52, 'cheese': 10}))
+
+# min_ratio = math.inf
+
+# for ingredient, amount in recipe.items():
+#     if ingredient not in ingredients:
+#         return 0
+#     ratio = math.floor(ingredients[ingredient] / amount)
+#     if ratio < min_ratio:
+#         min_ratio = ratio
+# return min_ratio
 
 
 if __name__ == '__main__':
