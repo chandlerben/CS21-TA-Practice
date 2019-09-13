@@ -15,7 +15,7 @@ def recipe_batches(recipe, ingredients):
     for ingredient, amount in recipe.items():
         if ingredient not in ingredients:
             return 0
-        new_ratio = math.floor(ingredients[ingredient] / amount)
+        new_ratio = (ingredients[ingredient] // amount)
         max_ratio = min(new_ratio, max_ratio)
     return max_ratio
 
