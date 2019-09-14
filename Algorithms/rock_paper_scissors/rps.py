@@ -17,9 +17,8 @@ def rock_paper_scissors(n):
     return output
 
 
-print(rock_paper_scissors(4))
-print(len(rock_paper_scissors(4)))
-
+print(rock_paper_scissors(5))
+print(len(rock_paper_scissors(5)))
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
