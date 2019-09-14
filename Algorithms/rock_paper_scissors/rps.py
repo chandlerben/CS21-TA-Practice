@@ -17,8 +17,8 @@ def rock_paper_scissors(n):
     return outcome
 
 
-print(rock_paper_scissors(2))
-print(len(rock_paper_scissors(20)))
+print(rock_paper_scissors(4))
+print(len(rock_paper_scissors(4)))
 
 
 if __name__ == "__main__":
