@@ -20,6 +20,9 @@ def merge(arrA, arrB):
             b += 1
     return merged_arr
 
+
+THIS_IS_A_VARIABLE = 928374928374
+
 [-1, 4, 6, 7, 8]
 [-7, -4, 0, 3, 3, 7]
 
@@ -45,20 +48,53 @@ def merge(arrA, arrB):
 
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
+test_array = [8, 1, 4, 6, 5, 3]
 
 
 def merge_sort(arr):
     # TO-DO
+    print(arr)
+    # [8,1,4,6,5,3]
     if len(arr) <= 1:
         return arr
     halfway_point = len(arr) // 2
-    left = merge_sort(arr[:halfway_point])
-    right = merge_sort(arr[halfway_point:])
+    print(arr[:halfway_point])  # [8,1,4]
+    left = [1, 4, 8]
+
+    print(arr[halfway_point:])
+    right = [3, 5, 6]
+
+    def merge(arrA, arrB):
+        elements = len(arrA) + len(arrB)
+        merged_arr = [0] * elements
+        # [0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0]
+        a = 0
+        b = 0
+        for i in range(0, elements):
+            if a >= len(arrA):
+                merged_arr[i] = arrB[b]
+                b += 1
+            elif b >= len(arrB):
+                merged_arr[i] = arrA[a]
+                a += 1
+            elif arrA[a] < arrB[b]:
+                merged_arr[i] = arrA[a]
+                a += 1
+            elif arrB[b] <= arrA[a]:
+                merged_arr[i] = arrB[b]
+                b += 1
+        return merged_arr
+
     sorted_array = merge(left, right)
+    print(sorted_array)
     return sorted_array
 
 
+print([1, 3, 4, 5, 6, 8, ])
+
 # STRETCH: implement an in-place merge sort algorithm
+
+
 def merge_in_place(arr, start, mid, end):
     # TO-DO
 
