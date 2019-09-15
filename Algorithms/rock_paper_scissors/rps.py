@@ -2,7 +2,23 @@
 
 import sys
 
+# Recursive Solution
 
+# def rock_paper_scissors(n):
+#     output = []
+#     plays = ["rock", "paper", "scissors"]
+
+#     def find_outcomes(result=[]):
+#         if len(result) == n:
+#             output.append(result)
+#             return
+#         for play in plays:
+#             find_outcomes(result + [play])
+#     find_outcomes([])
+#     return output
+
+
+# Iterative Solution
 def rock_paper_scissors(n):
     output = []
     plays = ["rock", "paper", "scissors"]
